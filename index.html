@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cognito manager</title>
+
+    <script src="js/aws-sdk-2.149.0.min.js"></script>
+    <script src="js/aws-cognito-sdk.min.js"></script>
+    <script src="js/amazon-cognito-identity.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <div class="fullscreenDiv">
+      <div class="column-container">
+        <div id="register" class="item">
+            <a class="menu-text" href="#">Register</a>
+        </div>
+        <div id="sign-in" class="item menu-text">
+            <a class="menu-text" href="#">Sign in</a>
+        </div>
+        <div id="sign-out" class="item menu-text hidden">
+            <a class="menu-text" href="#">Sign out</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="reg-dialog-form" title="Register">       
+      <form>
+        <fieldset>
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" class="text ui-widget-content ui-corner-all">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" class="text ui-widget-content ui-corner-all">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" class="text ui-widget-content ui-corner-all">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" class="text ui-widget-content ui-corner-all">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" class="text ui-widget-content ui-corner-all">
+        </fieldset>
+      </form>
+    </div>
+
+    <div id="verify-dialog-form" title="Verify">
+      <form>
+        <fieldset>
+            <label for="verification-code">Verification Code</label>
+            <input type="text" id="verification-code" class="text ui-widget-content ui-corner-all">
+        </fieldset>
+      </form>
+    </div>
+
+    <div id="registered-message" title="Registration complete!">
+      <p>
+        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+        You are now registered!
+      </p>
+    </div>
+
+    <div id="sign-in-form" title="Sign in">
+      <form>
+          <fieldset>            
+            <label for="sign-in-username">Username</label>
+            <input type="text" id="sign-in-username" class="text ui-widget-content ui-corner-all">
+            <label for="sign-in-password">Password</label>
+            <input type="password" id="sign-in-password" class="text ui-widget-content ui-corner-all">
+          </fieldset>
+        </form>
+    </div>
+
+  </body>
+
+</html>
